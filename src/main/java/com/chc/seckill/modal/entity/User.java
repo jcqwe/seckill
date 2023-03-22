@@ -14,7 +14,7 @@ import java.util.Date;
  */
 @TableName(value ="t_user")
 @Data
-public class TUser implements Serializable {
+public class User implements Serializable {
     /**
      * 用户ID,手机号码
      */

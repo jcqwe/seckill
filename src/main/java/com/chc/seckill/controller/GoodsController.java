@@ -1,6 +1,6 @@
 package com.chc.seckill.controller;
 
-import com.chc.seckill.modal.entity.TUser;
+import com.chc.seckill.modal.entity.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class GoodsController {
 
     @RequestMapping("/toList")
-    public String toList(Model model, TUser user){
+    public String toList(Model model, User user){
         model.addAttribute("currentUser",user);
         return "goodsList";
     }

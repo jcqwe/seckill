@@ -1,7 +1,7 @@
 package com.chc.seckill.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.chc.seckill.modal.entity.TUser;
+import com.chc.seckill.modal.entity.User;
 import com.chc.seckill.modal.vo.ResponseBean;
 import com.chc.seckill.modal.vo.UserLoginVo;
 
@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 * @description 针对表【t_user(用户表)】的数据库操作Service
 * @createDate 2023-03-16 11:53:57
 */
-public interface TUserService extends IService<TUser> {
+public interface UserService extends IService<User> {
 
     /**
      * 校验登录参数
@@ -29,5 +29,5 @@ public interface TUserService extends IService<TUser> {
      * @param response
      * @return
      */
-    TUser getCurrentUser(String cookie,HttpServletRequest request, HttpServletResponse response);
+    User getCurrentUser(String cookie,HttpServletRequest request, HttpServletResponse response);
 }

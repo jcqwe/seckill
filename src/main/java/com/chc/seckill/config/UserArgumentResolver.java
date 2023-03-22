@@ -1,8 +1,8 @@
 package com.chc.seckill.config;
 
 import com.chc.seckill.constant.UserConstant;
-import com.chc.seckill.modal.entity.TUser;
-import com.chc.seckill.service.TUserService;
+import com.chc.seckill.modal.entity.User;
+import com.chc.seckill.service.UserService;
 import com.chc.seckill.utils.CookieUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,11 +26,11 @@ import javax.servlet.http.HttpServletResponse;
 @Component
 public class UserArgumentResolver implements HandlerMethodArgumentResolver {
     @Autowired
-    private TUserService userService;
+    private UserService userService;
     @Override
     public boolean supportsParameter(MethodParameter parameter) {
         Class<?> parameterType = parameter.getParameterType();
-        return parameterType == TUser.class;
+        return parameterType == User.class;
     }
 
     @Override

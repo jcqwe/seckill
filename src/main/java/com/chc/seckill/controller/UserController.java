@@ -2,7 +2,7 @@ package com.chc.seckill.controller;
 
 import com.chc.seckill.modal.vo.ResponseBean;
 import com.chc.seckill.modal.vo.UserLoginVo;
-import com.chc.seckill.service.TUserService;
+import com.chc.seckill.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,7 +26,7 @@ import javax.validation.Valid;
 @Slf4j
 public class UserController {
     @Autowired
-    private TUserService tUserService;
+    private UserService tUserService;
 
     @RequestMapping("/toLogin")
     public String toLogin(){
