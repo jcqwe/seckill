@@ -2,6 +2,9 @@ package com.chc.seckill.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.chc.seckill.modal.entity.Goods;
+import com.chc.seckill.modal.vo.SeckillGoodsVo;
+
+import java.util.List;
 
 /**
 * @author Administrator
@@ -10,4 +13,6 @@ import com.chc.seckill.modal.entity.Goods;
 */
 public interface GoodsService extends IService<Goods> {
 
+    List<SeckillGoodsVo> findGoodsVo();
+    SeckillGoodsVo findGoodsVoByGoodsId(String goodsId);
 }

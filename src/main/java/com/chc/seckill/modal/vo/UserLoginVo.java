@@ -6,6 +6,7 @@ import lombok.ToString;
 import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 
 /***
  *@title LoginVo
@@ -16,11 +17,13 @@ import javax.validation.constraints.NotNull;
  **/
 @Data
 @ToString
-public class UserLoginVo {
+public class UserLoginVo implements Serializable {
     @NotNull
     @IsMobile
     private String mobile;
     @NotNull
     @Length(min = 32)
     private String password;
+
+    private static final long serialVersionUID = 1L;
 }

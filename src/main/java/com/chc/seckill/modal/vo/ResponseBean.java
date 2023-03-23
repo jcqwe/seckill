@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 /***
  *@title RequestBean
  *@description <TODO description class purpose>
@@ -14,7 +16,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ResponseBean {
+public class ResponseBean implements Serializable {
 
     private long code;
     private String message;
@@ -55,4 +57,6 @@ public class ResponseBean {
     public static ResponseBean error(ResponseEnum responseEnum,Object obj){
         return new ResponseBean(responseEnum.getCode(),responseEnum.getMessage(),obj);
     }
+
+    private static final long serialVersionUID = 1L;
 }
