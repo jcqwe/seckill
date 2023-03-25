@@ -1,5 +1,6 @@
 package com.chc.seckill.controller;
 
+import com.chc.seckill.modal.entity.User;
 import com.chc.seckill.modal.vo.ResponseBean;
 import com.chc.seckill.modal.vo.UserLoginVo;
 import com.chc.seckill.service.UserService;
@@ -38,5 +39,11 @@ public class UserController {
     public ResponseBean doLogin(@Valid UserLoginVo userLoginVo, HttpServletRequest request, HttpServletResponse response){
         log.info("{}",userLoginVo);
         return tUserService.checkLoginVO(userLoginVo,request,response);
+    }
+
+    @RequestMapping("/userInfo")
+    @ResponseBody
+    public ResponseBean getCurrentUser(User user){
+        return ResponseBean.success(user);
     }
 }
