@@ -2,6 +2,9 @@ package com.chc.seckill.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.chc.seckill.modal.entity.Order;
+import com.chc.seckill.modal.entity.User;
+import com.chc.seckill.modal.vo.SeckillGoodsVo;
+import com.sun.org.apache.xpath.internal.operations.Or;
 
 /**
 * @author Administrator
@@ -10,4 +13,5 @@ import com.chc.seckill.modal.entity.Order;
 */
 public interface OrderService extends IService<Order> {
 
+    Order seckill(User user, SeckillGoodsVo seckillGoodsVo);
 }
